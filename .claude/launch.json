@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bashgah-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3000", "E:\\project2\\mini project\\bashgah-site"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>باشگاه بدنسازی — سیستم مدیریت</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     صفحه اصلی (Landing)
+══════════════════════════════════════ -->
+<div id="landingPage" class="page active">
+
+  <!-- Navbar -->
+  <nav class="lp-main-nav" id="lpMainNav">
+    <a href="#" class="lp-main-logo">Iron<span>Zone</span><small>.ir</small></a>
+    <ul class="lp-main-links">
+      <li><a href="#lpServices">خدمات</a></li>
+      <li><a href="#lpCoaches">مربیان</a></li>
+      <li><a href="#lpStats">درباره ما</a></li>
+      <li><a href="#" class="lp-main-cta" onclick="showLogin(); return false;">ورود به پنل</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="lp-hero-sec" id="lpHome">
+    <div class="lp-hero-bg"></div>
+    <div class="lp-hero-ov"></div>
+    <div class="lp-hero-cnt">
+      <div class="lp-hero-badge">🏆 شماره یک بدنسازی ایران</div>
+      <h1 class="lp-hero-title">Train Hard.<br/><span>Live Strong.</span></h1>
+      <p class="lp-hero-sub">به باشگاه IronZone خوش آمدید — جایی که قهرمانان ساخته می‌شوند.<br/>با مربیان حرفه‌ای، تجهیزات مدرن و برنامه‌های تمرینی شخصی‌سازی‌شده.</p>
+      <div class="lp-hero-acts">
+        <a href="#" class="lp-cta-btn" onclick="showLogin(); return false;">همین الان شروع کن <span>←</span></a>
+        <a href="#lpServices" class="lp-ghost-btn">خدمات ما را ببین</a>
+      </div>
+    </div>
+    <div class="lp-scroll-ind">
+      <div class="lp-scroll-dot"></div>
+      <span>اسکرول کن</span>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="lp-stats-sec" id="lpStats">
+    <div class="lp-stats-row">
+      <div class="lp-stat-item reveal delay-1">
+        <div class="lp-stat-num"><span class="lp-counter" data-target="1250">0</span><sup>+</sup></div>
+        <div class="lp-stat-lbl">عضو فعال</div>
+      </div>
+      <div class="lp-stat-item reveal delay-2">
+        <div class="lp-stat-num"><span class="lp-counter" data-target="12">0</span><sup>+</sup></div>
+        <div class="lp-stat-lbl">سال تجربه</div>
+      </div>
+      <div class="lp-stat-item reveal delay-3">
+        <div class="lp-stat-num"><span class="lp-counter" data-target="28">0</span><sup>+</sup></div>
+        <div class="lp-stat-lbl">مربی متخصص</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="lp-services-sec" id="lpServices">
+    <div class="lp-sec-head reveal">
+      <div class="lp-sec-label">خدمات ما</div>
+      <h2 class="lp-sec-title">هر هدفی داری، <span>ما راه رو داریم</span></h2>
+      <p class="lp-sec-sub">با انواع کلاس‌ها و برنامه‌های تمرینی تخصصی، مسیر رسیدن به هدفت رو هموار می‌کنیم.</p>
+    </div>
+    <div class="lp-srv-grid">
+      <div class="lp-srv-card reveal delay-1">
+        <div class="lp-srv-icon lp-si-1">🏋️</div>
+        <h3>بدنسازی</h3>
+        <p>تمرینات وزنه‌کاری حرفه‌ای با برنامه شخصی‌سازی‌شده توسط مربیان مجرب. از مبتدی تا پیشرفته با تجهیزات روز دنیا.</p>
+        <a href="#" class="lp-srv-link" onclick="openServiceModal('bodybuilding'); return false;">بیشتر بدان ←</a>
+      </div>
+      <div class="lp-srv-card reveal delay-2">
+        <div class="lp-srv-icon lp-si-2">🔥</div>
+        <h3>کراسفیت</h3>
+        <p>تمرینات پرشدت و متنوع که استقامت، قدرت و چابکی تو رو به سطح بعدی می‌برن. چالش روزانه، نتیجه واقعی.</p>
+        <a href="#" class="lp-srv-link" onclick="openServiceModal('crossfit'); return false;">بیشتر بدان ←</a>
+      </div>
+      <div class="lp-srv-card reveal delay-3">
+        <div class="lp-srv-icon lp-si-3">🧘</div>
+        <h3>یوگا</h3>
+        <p>آرامش ذهن، انعطاف بدن و تعادل کامل با کلاس‌های یوگا هدایت‌شده. مناسب برای همه سنین و سطوح.</p>
+        <a href="#" class="lp-srv-link" onclick="openServiceModal('yoga'); return false;">بیشتر بدان ←</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaches -->
+  <section class="lp-coaches-sec" id="lpCoaches">
+    <div class="lp-sec-head reveal">
+      <div class="lp-sec-label">تیم ما</div>
+      <h2 class="lp-sec-title">مربیان <span>حرفه‌ای</span> ما</h2>
+      <p class="lp-sec-sub">با تجربه‌ترین مربیان ایران در کنارت هستند تا بهترین نتیجه رو بگیری.</p>
+    </div>
+    <div class="lp-coaches-grid" id="lpCoachesGrid"></div>
+  </section>
+
+  <!-- CTA -->
+  <div class="lp-cta-sec">
+    <div class="lp-cta-box reveal">
+      <div>
+        <h2>آماده‌ای تغییر بدی؟ <span>همین امروز شروع کن.</span></h2>
+        <p>اولین جلسه مشاوره رایگان — بدون تعهد، با نتیجه واقعی.</p>
+      </div>
+      <a href="#" class="lp-cta-btn" onclick="showLogin(); return false;">ثبت‌نام رایگان ←</a>
+    </div>
+  </div>
+
+  <!-- مودال خدمات -->
+  <div id="serviceModal" class="svc-modal-overlay hidden" onclick="if(event.target===this) closeServiceModal()">
+    <div class="svc-modal">
+      <button class="svc-modal-close" onclick="closeServiceModal()">✕</button>
+
+      <div class="svc-modal-head">
+        <div class="svc-modal-icon" id="svcIcon"></div>
+        <div>
+          <h2 id="svcTitle"></h2>
+          <p id="svcTagline"></p>
+        </div>
+      </div>
+
+      <p class="svc-modal-desc" id="svcDesc"></p>
+
+      <div class="svc-modal-body">
+        <div class="svc-col">
+          <h4>✅ مزایای کلیدی</h4>
+          <ul id="svcBenefits"></ul>
+        </div>
+        <div class="svc-col">
+          <h4>👤 مناسب برای چه کسانی؟</h4>
+          <ul id="svcWhoFor"></ul>
+        </div>
+      </div>
+
+      <div class="svc-modal-stats" id="svcStats"></div>
+
+      <div class="svc-modal-footer">
+        <button class="lp-cta-btn" onclick="closeServiceModal(); showLogin()">
+          همین الان ثبت‌نام کن ←
+        </button>
+        <button class="lp-ghost-btn" onclick="closeServiceModal()">بستن</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="lp-footer">
+    <div class="lp-footer-top">
+      <div class="lp-footer-brand">
+        <a href="#" class="lp-main-logo" style="font-size:24px">Iron<span>Zone</span><small>.ir</small></a>
+        <p>IronZone یک باشگاه بدنسازی حرفه‌ای در تهران است. هدف ما کمک به رسیدن شما به بهترین نسخه از خودتان است.</p>
+        <div class="lp-socials">
+          <a href="#" class="lp-social-btn">📸</a>
+          <a href="#" class="lp-social-btn">✈️</a>
+          <a href="#" class="lp-social-btn">💬</a>
+          <a href="#" class="lp-social-btn">▶️</a>
+        </div>
+      </div>
+      <div class="lp-footer-col">
+        <h4>لینک‌های سریع</h4>
+        <ul>
+          <li><a href="#lpHome">صفحه اصلی</a></li>
+          <li><a href="#lpServices">خدمات</a></li>
+          <li><a href="#lpCoaches">مربیان</a></li>
+          <li><a href="#lpStats">درباره ما</a></li>
+          <li><a href="#" onclick="showLogin(); return false;">ورود به پنل</a></li>
+        </ul>
+      </div>
+      <div class="lp-footer-col">
+        <h4>خدمات</h4>
+        <ul>
+          <li><a href="#">بدنسازی</a></li>
+          <li><a href="#">کراسفیت</a></li>
+          <li><a href="#">یوگا</a></li>
+          <li><a href="#">تغذیه ورزشی</a></li>
+          <li><a href="#">مشاوره رایگان</a></li>
+        </ul>
+      </div>
+      <div class="lp-footer-col">
+        <h4>تماس با ما</h4>
+        <ul>
+          <li><a href="tel:02188888888">📞 ۰۲۱-۸۸۸۸۸۸۸۸</a></li>
+          <li><a href="mailto:info@ironzone.ir">📧 info@ironzone.ir</a></li>
+          <li><a href="#">📍 تهران، خیابان ولیعصر</a></li>
+          <li><a href="#">⏰ شنبه تا پنجشنبه ۶–۲۲</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="lp-footer-bottom">
+      <span>© ۱۴۰۳ IronZone.ir — تمامی حقوق محفوظ است</span>
+      <span>ساخته‌شده با ❤️ برای ورزشکاران ایرانی</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     صفحه ورود
+══════════════════════════════════════ -->
+<div id="loginPage" class="page">
+  <div class="lp-hero">
+
+    <!-- نوار ناوبری -->
+    <nav class="lp-nav" dir="ltr">
+      <div class="lp-logo">
+        Iron<span>Zone</span><span class="lp-logo-ir">.ir</span>
+      </div>
+      <ul class="lp-nav-links">
+        <li><a href="#" class="lp-active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- بدنه -->
+    <div class="lp-body">
+
+      <!-- شعار سمت چپ -->
+      <div class="lp-slogan" dir="ltr">
+        <h1>Train Hard.<br/><span>Live Strong.</span></h1>
+        <p>به سیستم مدیریت حرفه‌ای IronZone خوش آمدید.<br/>هدف‌هایت را بساز — قوی‌تر از دیروز باش.</p>
+      </div>
+
+      <!-- فرم سفید سمت راست -->
+      <div class="lp-card" id="loginCard" dir="ltr">
+
+        <button class="lp-back-btn" onclick="showPage('landingPage'); window.scrollTo({top:0,behavior:'instant'})">
+          ← بازگشت به صفحه اصلی
+        </button>
+
+        <!-- تب‌های ورود / ثبت‌نام -->
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tabBtnLogin"    onclick="switchAuthTab('login')">ورود</button>
+          <button class="auth-tab"        id="tabBtnRegister" onclick="switchAuthTab('register')">ثبت‌نام</button>
+        </div>
+
+        <!-- ─── فرم ورود ─── -->
+        <div id="loginFormWrap">
+          <div class="lp-group">
+            <label>نام کاربری</label>
+            <input type="text" id="loginUsername" placeholder="Enter your username" autocomplete="off" lang="en" />
+            <div id="warnUsername" class="lp-warn hidden">⚠️ فقط حروف انگلیسی مجاز است</div>
+          </div>
+          <div class="lp-group">
+            <label>رمز عبور</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password"
+                   onkeydown="if(event.key==='Enter') login()" lang="en" />
+            <div id="warnPassword" class="lp-warn hidden">⚠️ فقط حروف انگلیسی مجاز است</div>
+          </div>
+          <div class="lp-group">
+            <label>نقش کاربری</label>
+            <select id="loginRole">
+              <option value="admin">مدیر</option>
+              <option value="coach">مربی</option>
+              <option value="athlete">ورزشکار</option>
+            </select>
+          </div>
+          <button class="lp-btn" onclick="login()">ورود به سیستم</button>
+          <div id="loginError" class="lp-error hidden">نام کاربری یا رمز عبور اشتباه است ⚠️</div>
+          <div class="lp-hint">
+            admin / 1234 &nbsp;·&nbsp; coach / 1234 &nbsp;·&nbsp; athlete / 1234
+          </div>
+        </div>
+
+        <!-- ─── فرم ثبت‌نام ─── -->
+        <div id="registerFormWrap" style="display:none" dir="rtl">
+          <div class="lp-group">
+            <label>نام و نام خانوادگی</label>
+            <input type="text" id="regName" placeholder="علی رضایی" />
+          </div>
+          <div class="lp-group">
+            <label>نام کاربری</label>
+            <input type="text" id="regUsername" placeholder="myusername" autocomplete="off" lang="en" />
+            <div id="warnRegUsername" class="lp-warn hidden">⚠️ فقط حروف انگلیسی مجاز است</div>
+          </div>
+          <div class="lp-group">
+            <label>رمز عبور</label>
+            <input type="password" id="regPassword" placeholder="حداقل ۶ کاراکتر" lang="en" />
+            <div id="warnRegPassword" class="lp-warn hidden">⚠️ فقط حروف انگلیسی مجاز است</div>
+          </div>
+          <div class="lp-group">
+            <label>تکرار رمز عبور</label>
+            <input type="password" id="regConfirm" placeholder="رمز عبور را تکرار کنید"
+                   onkeydown="if(event.key==='Enter') register()" lang="en" />
+          </div>
+          <div class="lp-group">
+            <label>نقش کاربری</label>
+            <select id="regRole">
+              <option value="athlete">🏋️ ورزشکار</option>
+              <option value="coach">🎯 مربی</option>
+            </select>
+          </div>
+          <button class="lp-btn" onclick="register()">ایجاد حساب کاربری</button>
+          <div id="registerMsg" class="hidden"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     داشبورد
+══════════════════════════════════════ -->
+<div id="dashboardPage" class="page">
+
+  <!-- نوار بالا -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="brand-logo">🏋️</div>
+      <span class="brand-name">Iron<span class="brand-orange">Zone</span><span class="brand-ir">.ir</span></span>
+    </div>
+    <div class="topbar-right">
+      <!-- اعلان‌ها -->
+      <div class="notif-wrap" id="notifWrap">
+        <button class="notif-btn" onclick="toggleNotifications()">
+          🔔
+          <span class="notif-badge hidden" id="notifBadge">0</span>
+        </button>
+        <div class="notif-dropdown hidden" id="notifDropdown">
+          <div class="notif-head">
+            <span>اعلان‌ها</span>
+            <button class="notif-clear-btn" onclick="clearNotifications()">پاک کردن</button>
+          </div>
+          <div id="notifList"><div class="notif-empty">اعلانی وجود ندارد</div></div>
+        </div>
+      </div>
+      <div class="topbar-divider"></div>
+      <div class="topbar-user-info">
+        <div class="u-name" id="userNameDisplay"></div>
+        <div class="u-role" id="userRoleDisplay"></div>
+      </div>
+      <span class="role-chip" id="userRoleBadge"></span>
+      <button class="btn btn-ghost btn-sm" onclick="logout()">خروج</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- منوی کناری -->
+    <aside class="sidebar">
+      <div class="sidebar-section-label">منوی اصلی</div>
+      <nav>
+        <div class="nav-item" id="navItemHome">
+          <a href="#" class="nav-link active" onclick="showSection('overviewSection',this)">
+            <div class="nav-icon">🏠</div> خانه
+          </a>
+        </div>
+        <div class="nav-item" id="navItemMembers">
+          <a href="#" class="nav-link" onclick="showSection('membersSection',this)">
+            <div class="nav-icon">👥</div> اعضا
+          </a>
+        </div>
+        <div class="nav-item" id="navItemCoaches">
+          <a href="#" class="nav-link" onclick="toggleCoachesSubmenu(event, this)">
+            <div class="nav-icon">🎯</div> مربیان
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-submenu" id="coachesSubmenu">
+            <a href="#" class="nav-sublink" onclick="filterCoachesBySpecialty('bodybuilding', this)">🏋️ بدنسازی</a>
+            <a href="#" class="nav-sublink" onclick="filterCoachesBySpecialty('crossfit', this)">🔥 کراسفیت</a>
+            <a href="#" class="nav-sublink" onclick="filterCoachesBySpecialty('yoga', this)">🧘 یوگا</a>
+          </div>
+        </div>
+        <div class="nav-item" id="navItemPayment">
+          <a href="#" class="nav-link" onclick="showSection('paymentSection',this)">
+            <div class="nav-icon">💳</div> پرداخت
+          </a>
+        </div>
+        <div class="nav-item" id="navItemReports">
+          <a href="#" class="nav-link" onclick="showSection('reportsSection',this)">
+            <div class="nav-icon">📊</div> گزارشات
+          </a>
+        </div>
+        <div class="nav-item" id="navItemMgmt">
+          <a href="#" class="nav-link" onclick="showSection('memberMgmtSection',this)">
+            <div class="nav-icon">🗂️</div> مدیریت اعضا
+          </a>
+        </div>
+        <div class="nav-item" id="navItemWorkout">
+          <a href="#" class="nav-link" onclick="showSection('workoutSection',this)">
+            <div class="nav-icon">🏋️</div> برنامه تمرینی
+          </a>
+        </div>
+      </nav>
+
+      <!-- بخش مدیریت — فقط admin -->
+      <div id="adminNavSection" class="hidden">
+        <div class="sidebar-section-label" style="margin-top:16px;padding-top:8px;border-top:1px solid var(--glass-border)">مدیریت سیستم</div>
+        <nav>
+          <div class="nav-item">
+            <a href="#" class="nav-link nav-admin-link" onclick="showSection('adminSection',this)">
+              <div class="nav-icon">⚙️</div> مدیریت
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-ghost btn-full btn-sm" onclick="logout()">🚪 خروج از سیستم</button>
+      </div>
+    </aside>
+
+    <!-- محتوا -->
+    <main class="main-content">
+
+      <!-- ─── داشبورد ─── -->
+      <section id="overviewSection" class="section active">
+        <div class="page-header">
+          <h2>داشبورد</h2>
+          <p>خلاصه وضعیت باشگاه</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card stat-card-1">
+            <div class="stat-top">
+              <div class="stat-icon-box si-orange">👥</div>
+              <span class="stat-trend trend-up" id="trendTotal">↑</span>
+            </div>
+            <div class="stat-num sn-orange" id="totalMembers">0</div>
+            <div class="stat-lbl">کل اعضا</div>
+          </div>
+          <div class="stat-card stat-card-2">
+            <div class="stat-top">
+              <div class="stat-icon-box si-cyan">🏋️</div>
+              <span class="stat-trend trend-zero">—</span>
+            </div>
+            <div class="stat-num sn-cyan" id="athleteCount">0</div>
+            <div class="stat-lbl">ورزشکار</div>
+          </div>
+          <div class="stat-card stat-card-3">
+            <div class="stat-top">
+              <div class="stat-icon-box si-green">🎯</div>
+              <span class="stat-trend trend-zero">—</span>
+            </div>
+            <div class="stat-num sn-green" id="coachCount">0</div>
+            <div class="stat-lbl">مربی</div>
+          </div>
+          <div class="stat-card stat-card-4">
+            <div class="stat-top">
+              <div class="stat-icon-box si-purple">⭐</div>
+              <span class="stat-trend trend-zero">—</span>
+            </div>
+            <div class="stat-num sn-purple" id="vipCount">0</div>
+            <div class="stat-lbl">عضو VIP</div>
+          </div>
+        </div>
+
+        <!-- نمودار درآمد -->
+        <div class="charts-row">
+          <div class="chart-card chart-main">
+            <div class="chart-card-header">
+              <div>
+                <h3>درآمد ماهانه</h3>
+                <p>بر اساس اشتراک اعضا (تومان)</p>
+              </div>
+              <span class="chart-period-badge">۶ ماه اخیر</span>
+            </div>
+            <canvas id="revenueChart" height="100"></canvas>
+          </div>
+        </div>
+
+        <!-- آخرین اعضا -->
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="dot-badge"></span>آخرین اعضای ثبت‌نام شده</h3>
+            <button class="btn btn-ghost btn-sm" onclick="showSection('membersSection',null)">
+              مشاهده همه
+            </button>
+          </div>
+          <div id="recentMembers"></div>
+        </div>
+
+        <!-- اعضای در شرف انقضا -->
+        <div class="card">
+          <div class="card-header">
+            <h3><span class="dot-badge" style="background:var(--accent)"></span>اعضای در شرف انقضا</h3>
+          </div>
+          <div id="expiringList"></div>
+        </div>
+      </section>
+
+      <!-- ─── لیست اعضا ─── -->
+      <section id="membersSection" class="section">
+        <div class="page-header-row">
+          <div class="page-header" style="margin-bottom:0">
+            <h2>لیست اعضا</h2>
+            <p id="memberCountLabel">در حال بارگذاری...</p>
+          </div>
+          <div class="toolbar-right">
+            <div class="search-wrap">
+              <span class="s-icon">🔍</span>
+              <input type="text" id="searchInput" class="search-input"
+                     placeholder="جستجوی نام یا شماره..." oninput="filterMembers()" />
+            </div>
+            <select id="filterType" class="filter-select" onchange="filterMembers()">
+              <option value="all">همه نقش‌ها</option>
+              <option value="athlete">ورزشکار</option>
+              <option value="coach">مربی</option>
+              <option value="vip">VIP</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="members-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>نام</th>
+                <th>شماره تماس</th>
+                <th>سن</th>
+                <th>نوع عضویت</th>
+                <th>پلن</th>
+                <th>تاریخ شروع</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="membersTableBody"></tbody>
+          </table>
+          <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">🏋️</div>
+            <p>هیچ عضوی یافت نشد</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── مربیان ─── -->
+      <section id="coachesSection" class="section">
+        <div class="page-header-row">
+          <div class="page-header" style="margin-bottom:0">
+            <h2>مربیان</h2>
+            <p id="coachCountLabel">در حال بارگذاری...</p>
+          </div>
+        </div>
+        <div class="coaches-grid" id="coachesGrid"></div>
+        <div id="coachesEmpty" class="empty-state hidden">
+          <div class="empty-icon">🎯</div>
+          <p>هیچ مربی‌ای ثبت نشده — از بخش «مدیریت اعضا» مربی اضافه کنید</p>
+        </div>
+      </section>
+
+      <!-- ─── پرداخت ─── -->
+      <section id="paymentSection" class="section">
+        <div class="page-header">
+          <h2>پرداخت‌ها</h2>
+          <p>ثبت و مدیریت پرداخت‌های اعضا</p>
+        </div>
+        <div class="form-card" style="margin-bottom:24px">
+          <div class="form-grid">
+            <div class="fg">
+              <label>عضو <span class="req">*</span></label>
+              <select id="payMemberSel"></select>
+            </div>
+            <div class="fg">
+              <label>مبلغ (تومان) <span class="req">*</span></label>
+              <input type="number" id="payAmount" placeholder="500000" />
+            </div>
+            <div class="fg">
+              <label>تاریخ پرداخت</label>
+              <div id="payDate"></div>
+            </div>
+            <div class="fg">
+              <label>نوع پرداخت</label>
+              <select id="payType">
+                <option value="subscription">💎 اشتراک ماهانه</option>
+                <option value="session">🏋️ جلسه‌ای</option>
+                <option value="other">📝 سایر</option>
+              </select>
+            </div>
+            <div class="fg full">
+              <label>توضیحات</label>
+              <input type="text" id="payDesc" placeholder="توضیحات پرداخت..." />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="addPayment()">💳 ثبت پرداخت</button>
+          </div>
+          <div id="payMsg" class="hidden"></div>
+        </div>
+        <div class="table-wrap">
+          <table class="members-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>عضو</th>
+                <th>مبلغ (تومان)</th>
+                <th>نوع</th>
+                <th>تاریخ</th>
+                <th>توضیحات</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="paymentTableBody"></tbody>
+          </table>
+          <div id="paymentEmpty" class="empty-state hidden">
+            <div class="empty-icon">💳</div>
+            <p>هیچ پرداختی ثبت نشده</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── گزارشات ─── -->
+      <section id="reportsSection" class="section">
+        <div class="page-header">
+          <h2>گزارشات</h2>
+          <p>آمار و تحلیل وضعیت باشگاه</p>
+        </div>
+        <div class="reports-grid">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div><h3>توزیع نوع عضویت</h3></div>
+            </div>
+            <canvas id="memberTypeChart" height="200"></canvas>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div><h3>توزیع پلن‌ها</h3></div>
+            </div>
+            <canvas id="planTypeChart" height="200"></canvas>
+          </div>
+        </div>
+        <div class="chart-card" style="margin-top:20px">
+          <div class="chart-card-header">
+            <div>
+              <h3>درآمد سالانه</h3>
+              <p>بر اساس اشتراک اعضا (تومان)</p>
+            </div>
+          </div>
+          <canvas id="annualRevenueChart" height="90"></canvas>
+        </div>
+      </section>
+
+      <!-- ─── مدیریت اعضا ─── -->
+      <section id="memberMgmtSection" class="section">
+        <div class="page-header">
+          <h2>مدیریت اعضا</h2>
+          <p>ثبت‌نام، لیست اعضا و پروفایل با مدیریت اشتراک و انقضا</p>
+        </div>
+
+        <!-- تب‌ها -->
+        <div class="mgmt-tabs">
+          <button class="mgmt-tab active" onclick="switchTab('tabReg',this)">📋 ثبت‌نام</button>
+          <button class="mgmt-tab" onclick="switchTab('tabMgList',this)">📃 لیست اعضا</button>
+          <button class="mgmt-tab" onclick="switchTab('tabProfile',this)">👤 پروفایل</button>
+        </div>
+
+        <!-- ─ تب ثبت‌نام ─ -->
+        <div id="tabReg" class="mgmt-panel active">
+          <div class="form-card">
+            <div class="form-grid">
+              <div class="fg">
+                <label>نام و نام خانوادگی <span class="req">*</span></label>
+                <input type="text" id="mgName" placeholder="علی رضایی" />
+              </div>
+              <div class="fg">
+                <label>شماره تماس <span class="req">*</span></label>
+                <input type="tel" id="mgPhone" placeholder="09123456789" />
+              </div>
+              <div class="fg">
+                <label>کد ملی</label>
+                <input type="text" id="mgNationalId" placeholder="0123456789" maxlength="10" />
+              </div>
+              <div class="fg">
+                <label>وزن (کیلوگرم)</label>
+                <input type="number" id="mgWeight" placeholder="75" />
+              </div>
+              <div class="fg">
+                <label>قد (سانتی‌متر)</label>
+                <input type="number" id="mgHeight" placeholder="175" />
+              </div>
+              <div class="fg">
+                <label>تاریخ تولد</label>
+                <div id="mgBirthDate"></div>
+              </div>
+              <div class="fg">
+                <label>نوع عضویت</label>
+                <select id="mgType" onchange="_toggleMgSpecialty()">
+                  <option value="athlete">🏋️ ورزشکار</option>
+                  <option value="coach">🎯 مربی</option>
+                  <option value="vip">⭐ VIP</option>
+                </select>
+              </div>
+              <div class="fg hidden" id="mgSpecialtyWrap">
+                <label>رشته تخصصی</label>
+                <select id="mgSpecialty">
+                  <option value="bodybuilding">🏋️ بدنسازی</option>
+                  <option value="crossfit">🔥 کراسفیت</option>
+                  <option value="yoga">🧘 یوگا</option>
+                </select>
+              </div>
+              <div class="fg hidden" id="mgUsernameWrap">
+                <label>نام کاربری <span class="req">*</span></label>
+                <input type="text" id="mgUsername" placeholder="حداقل ۴ کاراکتر انگلیسی" />
+              </div>
+              <div class="fg hidden" id="mgPasswordWrap">
+                <label>رمز عبور <span class="req">*</span></label>
+                <input type="password" id="mgPassword" placeholder="حداقل ۶ کاراکتر" />
+              </div>
+              <div class="fg">
+                <label>پلن تمرینی</label>
+                <select id="mgPlan">
+                  <option value="basic">پایه</option>
+                  <option value="standard">استاندارد</option>
+                  <option value="premium">پریمیوم</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>نوع اشتراک <span class="req">*</span></label>
+                <select id="mgSubType" onchange="updateMgExpiryPreview()">
+                  <option value="monthly">📆 ماهانه (۱ ماه)</option>
+                  <option value="quarterly">📆 سه‌ماهه (۳ ماه)</option>
+                  <option value="yearly">📆 سالانه (۱۲ ماه)</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>تاریخ شروع اشتراک <span class="req">*</span></label>
+                <div id="mgStartDate"></div>
+              </div>
+              <div class="fg">
+                <label>تاریخ انقضا (محاسبه خودکار)</label>
+                <div class="mg-expiry-preview" id="mgExpiryPreview">— ابتدا تاریخ شروع را انتخاب کنید</div>
+              </div>
+              <div class="fg">
+                <label>عکس پروفایل</label>
+                <input type="file" id="mgPhotoFile" accept="image/*" class="file-input" onchange="mgPhotoPreview(this)" />
+              </div>
+              <div class="fg">
+                <label>پیش‌نمایش عکس</label>
+                <div class="mg-photo-preview-wrap">
+                  <img id="mgPhotoPreviewImg" class="mg-photo-preview hidden" alt="پیش‌نمایش عکس پروفایل" />
+                  <span id="mgPhotoPreviewEmpty" class="mg-photo-preview-empty">بدون عکس</span>
+                </div>
+              </div>
+              <div class="fg full">
+                <label>توضیحات</label>
+                <textarea id="mgNotes" rows="3" placeholder="یادداشت..."></textarea>
+              </div>
+            </div>
+            <div class="form-divider"></div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="mgRegister()">✅ ثبت عضو</button>
+              <button class="btn btn-ghost" onclick="mgClear()">پاک کردن</button>
+            </div>
+            <div id="mgRegMsg" class="hidden"></div>
+          </div>
+        </div>
+
+        <!-- ─ تب لیست اعضا ─ -->
+        <div id="tabMgList" class="mgmt-panel">
+          <div class="page-header-row" style="margin-bottom:18px">
+            <div class="page-header" style="margin-bottom:0">
+              <h2 style="font-size:18px">لیست اعضا و وضعیت اشتراک</h2>
+              <p id="mgListCountLabel">در حال بارگذاری...</p>
+            </div>
+            <div class="toolbar-right">
+              <div class="search-wrap">
+                <span class="s-icon">🔍</span>
+                <input type="text" id="mgListSearch" class="search-input"
+                       placeholder="جستجوی نام یا شماره..." oninput="renderMgList()" />
+              </div>
+              <select id="mgListFilter" class="filter-select" onchange="renderMgList()">
+                <option value="all">همه وضعیت‌ها</option>
+                <option value="active">🟢 فعال</option>
+                <option value="soon">🟡 نزدیک انقضا</option>
+                <option value="expired">🔴 منقضی</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="members-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>نام</th>
+                  <th>شماره تماس</th>
+                  <th>نوع اشتراک</th>
+                  <th>تاریخ شروع</th>
+                  <th>تاریخ انقضا</th>
+                  <th>وضعیت</th>
+                  <th>عملیات</th>
+                </tr>
+              </thead>
+              <tbody id="mgListTableBody"></tbody>
+            </table>
+            <div id="mgListEmpty" class="empty-state hidden">
+              <div class="empty-icon">🏋️</div>
+              <p>هیچ عضوی یافت نشد</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ تب پروفایل ─ -->
+        <div id="tabProfile" class="mgmt-panel">
+          <div class="profile-search-bar">
+            <input type="text" id="profileSearch" placeholder="🔍 جستجوی نام یا شماره عضو..." oninput="profileSearchFn()" />
+          </div>
+          <div id="profileList" class="profile-list"></div>
+          <div id="profileDetail" class="profile-detail hidden"></div>
+        </div>
+
+      </section>
+
+      <!-- ─── برنامه تمرینی ─── -->
+      <section id="workoutSection" class="section">
+        <div class="page-header">
+          <h2>برنامه تمرینی</h2>
+          <p>ساخت، مدیریت و پیگیری برنامه‌های تمرینی اعضا</p>
+        </div>
+
+        <!-- فرم ساخت برنامه تمرینی -->
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="fg">
+              <label>عضو <span class="req">*</span></label>
+              <select id="wpMember"></select>
+            </div>
+            <div class="fg">
+              <label>مربی مسئول</label>
+              <select id="wpCoach"></select>
+            </div>
+            <div class="fg">
+              <label>تاریخ شروع <span class="req">*</span></label>
+              <div id="wpStartDate"></div>
+            </div>
+            <div class="fg">
+              <label>تاریخ پایان <span class="req">*</span></label>
+              <div id="wpEndDate"></div>
+            </div>
+            <div class="fg full">
+              <label>توضیحات</label>
+              <textarea id="wpNotes" rows="2" placeholder="یادداشت..."></textarea>
+            </div>
+          </div>
+
+          <!-- لیست حرکات تمرینی -->
+          <div class="form-divider"></div>
+          <div class="wp-ex-head">
+            <span>حرکت</span>
+            <span>ست</span>
+            <span>تکرار</span>
+            <span>وزن (کیلوگرم)</span>
+            <span></span>
+          </div>
+          <div id="wpExList"></div>
+          <button class="btn btn-ghost btn-sm" type="button" onclick="wpAddExerciseRow()">➕ افزودن حرکت</button>
+
+          <div class="form-divider"></div>
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="wpRegister()">✅ ثبت برنامه</button>
+            <button class="btn btn-ghost" onclick="wpClear()">پاک کردن</button>
+          </div>
+          <div id="wpRegMsg" class="hidden"></div>
+        </div>
+
+        <!-- لیست برنامه‌های تمرینی -->
+        <div class="page-header-row" style="margin:24px 0 18px">
+          <div class="page-header" style="margin-bottom:0">
+            <h2 style="font-size:18px">لیست برنامه‌های تمرینی</h2>
+            <p id="wpListCountLabel">در حال بارگذاری...</p>
+          </div>
+          <div class="toolbar-right">
+            <div class="search-wrap">
+              <span class="s-icon">🔍</span>
+              <input type="text" id="wpListSearch" class="search-input"
+                     placeholder="جستجوی نام عضو..." oninput="renderWorkoutList()" />
+            </div>
+            <select id="wpListFilter" class="filter-select" onchange="renderWorkoutList()">
+              <option value="all">همه وضعیت‌ها</option>
+              <option value="active">🟢 فعال</option>
+              <option value="expired">🔴 منقضی</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="members-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>عضو</th>
+                <th>مربی</th>
+                <th>تاریخ شروع</th>
+                <th>تاریخ پایان</th>
+                <th>تعداد حرکات</th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="wpListTableBody"></tbody>
+          </table>
+          <div id="wpListEmpty" class="empty-state hidden">
+            <div class="empty-icon">🏋️</div>
+            <p>هیچ برنامه تمرینی ثبت نشده است</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- داشبورد ورزشکار -->
+      <section id="athleteDashboard" class="section">
+        <div id="athExpiryBanner" class="hidden"></div>
+        <div class="page-header">
+          <h2 id="athWelcome">خوش آمدید</h2>
+          <p>برنامه‌های تمرینی شما</p>
+        </div>
+        <div class="ath-plans-grid" id="athPlansGrid"></div>
+        <div id="athPlansEmpty" class="empty-state hidden">
+          <div class="empty-icon">🏋️</div>
+          <p>هنوز برنامه تمرینی برای شما ثبت نشده است</p>
+        </div>
+      </section>
+
+      <!-- ─── مدیریت سیستم (admin) ─── -->
+      <section id="adminSection" class="section">
+        <div class="page-header">
+          <h2>پنل مدیریت</h2>
+          <p>مدیریت سیستم — دسترسی محدود به مدیر</p>
+        </div>
+
+        <div class="mgmt-tabs">
+          <button class="mgmt-tab active" onclick="switchAdminTab('adminUsers',this)">👤 کاربران</button>
+          <button class="mgmt-tab" onclick="switchAdminTab('adminCredentials',this)">🔑 اعتبارنامه‌ها</button>
+          <button class="mgmt-tab" onclick="switchAdminTab('adminGym',this)">🏛️ تنظیمات باشگاه</button>
+          <button class="mgmt-tab" onclick="switchAdminTab('adminPlans',this)">💎 پلن‌ها</button>
+          <button class="mgmt-tab" onclick="switchAdminTab('adminLog',this)">📋 لاگ فعالیت</button>
+        </div>
+
+        <!-- کاربران -->
+        <div id="adminUsers" class="mgmt-panel active">
+          <div id="adminUsersList"></div>
+        </div>
+
+        <!-- اعتبارنامه‌های مربیان و ورزشکاران -->
+        <div id="adminCredentials" class="mgmt-panel">
+          <div id="adminCredentialsList"></div>
+        </div>
+
+        <!-- تنظیمات باشگاه -->
+        <div id="adminGym" class="mgmt-panel">
+          <div class="form-card">
+            <div class="form-grid">
+              <div class="fg">
+                <label>نام باشگاه</label>
+                <input type="text" id="gymName" placeholder="IronZone" />
+              </div>
+              <div class="fg">
+                <label>شماره تماس</label>
+                <input type="tel" id="gymPhone" placeholder="021-88888888" />
+              </div>
+              <div class="fg">
+                <label>ایمیل</label>
+                <input type="email" id="gymEmail" placeholder="info@ironzone.ir" />
+              </div>
+              <div class="fg full">
+                <label>آدرس</label>
+                <input type="text" id="gymAddress" placeholder="تهران، خیابان ولیعصر" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="saveGymSettings()">💾 ذخیره تنظیمات</button>
+            </div>
+            <div id="gymSettingsMsg" class="hidden"></div>
+          </div>
+        </div>
+
+        <!-- پلن‌ها -->
+        <div id="adminPlans" class="mgmt-panel">
+          <div class="form-card" style="margin-bottom:20px">
+            <div class="form-grid">
+              <div class="fg">
+                <label>نام پلن <span class="req">*</span></label>
+                <input type="text" id="planName" placeholder="مثال: طلایی" />
+              </div>
+              <div class="fg">
+                <label>قیمت (تومان) <span class="req">*</span></label>
+                <input type="number" id="planPrice" placeholder="1000000" />
+              </div>
+              <div class="fg">
+                <label>مدت (ماه)</label>
+                <input type="number" id="planDuration" placeholder="1" min="1" max="12" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" onclick="addPlan()">➕ افزودن پلن</button>
+            </div>
+            <div id="planMsg" class="hidden"></div>
+          </div>
+          <div id="plansList"></div>
+        </div>
+
+        <!-- لاگ فعالیت -->
+        <div id="adminLog" class="mgmt-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3><span class="dot-badge"></span>لاگ فعالیت‌های سیستم</h3>
+              <button class="btn btn-ghost btn-sm" onclick="clearActivityLog()">پاک کردن</button>
+            </div>
+            <div id="activityLogList"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- مودال ویرایش عضو -->
+<div id="editMemberModal" class="modal-overlay hidden">
+  <div class="modal modal-wide">
+    <h3 style="margin-bottom:18px">✏️ ویرایش اطلاعات عضو</h3>
+    <div class="form-grid">
+      <div class="fg">
+        <label>نام و نام خانوادگی <span class="req">*</span></label>
+        <input type="text" id="emName" />
+      </div>
+      <div class="fg">
+        <label>شماره تماس <span class="req">*</span></label>
+        <input type="tel" id="emPhone" />
+      </div>
+      <div class="fg">
+        <label>کد ملی</label>
+        <input type="text" id="emNationalId" maxlength="10" />
+      </div>
+      <div class="fg">
+        <label>وزن (کیلوگرم)</label>
+        <input type="number" id="emWeight" />
+      </div>
+      <div class="fg">
+        <label>قد (سانتی‌متر)</label>
+        <input type="number" id="emHeight" />
+      </div>
+      <div class="fg">
+        <label>نوع عضویت</label>
+        <select id="emType" onchange="_toggleEmSpecialty()">
+          <option value="athlete">🏋️ ورزشکار</option>
+          <option value="coach">🎯 مربی</option>
+          <option value="vip">⭐ VIP</option>
+        </select>
+      </div>
+      <div class="fg hidden" id="emSpecialtyWrap">
+        <label>رشته تخصصی</label>
+        <select id="emSpecialty">
+          <option value="bodybuilding">🏋️ بدنسازی</option>
+          <option value="crossfit">🔥 کراسفیت</option>
+          <option value="yoga">🧘 یوگا</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>پلن تمرینی</label>
+        <select id="emPlan">
+          <option value="basic">پایه</option>
+          <option value="standard">استاندارد</option>
+          <option value="premium">پریمیوم</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>نوع اشتراک</label>
+        <select id="emSubType" onchange="updateEmExpiryPreview()">
+          <option value="monthly">📆 ماهانه (۱ ماه)</option>
+          <option value="quarterly">📆 سه‌ماهه (۳ ماه)</option>
+          <option value="yearly">📆 سالانه (۱۲ ماه)</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>تاریخ شروع اشتراک</label>
+        <div id="emStartDate"></div>
+      </div>
+      <div class="fg">
+        <label>تاریخ انقضا (محاسبه خودکار)</label>
+        <div class="mg-expiry-preview" id="emExpiryPreview">—</div>
+      </div>
+    </div>
+    <div class="modal-actions" style="margin-top:24px">
+      <button class="btn btn-primary" onclick="saveEditMember()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-ghost" onclick="closeEditModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ویرایش برنامه تمرینی -->
+<div id="editWorkoutModal" class="modal-overlay hidden">
+  <div class="modal modal-wide">
+    <h3 style="margin-bottom:18px">✏️ ویرایش برنامه تمرینی</h3>
+    <div class="form-grid">
+      <div class="fg">
+        <label>عضو <span class="req">*</span></label>
+        <select id="ewMember"></select>
+      </div>
+      <div class="fg">
+        <label>مربی مسئول</label>
+        <select id="ewCoach"></select>
+      </div>
+      <div class="fg">
+        <label>تاریخ شروع <span class="req">*</span></label>
+        <div id="ewStartDate"></div>
+      </div>
+      <div class="fg">
+        <label>تاریخ پایان <span class="req">*</span></label>
+        <div id="ewEndDate"></div>
+      </div>
+      <div class="fg full">
+        <label>توضیحات</label>
+        <textarea id="ewNotes" rows="2"></textarea>
+      </div>
+    </div>
+
+    <div class="form-divider"></div>
+    <div class="wp-ex-head">
+      <span>حرکت</span>
+      <span>ست</span>
+      <span>تکرار</span>
+      <span>وزن (کیلوگرم)</span>
+      <span></span>
+    </div>
+    <div id="ewExList"></div>
+    <button class="btn btn-ghost btn-sm" type="button" onclick="ewAddExerciseRow()">➕ افزودن حرکت</button>
+
+    <div class="modal-actions" style="margin-top:24px">
+      <button class="btn btn-primary" onclick="saveEditWorkout()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-ghost" onclick="closeEditWorkoutModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- مودال حذف -->
+<div id="deleteModal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-icon">🗑️</div>
+    <h3>حذف عضو</h3>
+    <p>این عملیات قابل بازگشت نیست.<br/>آیا مطمئن هستید؟</p>
+    <div class="modal-actions">
+      <button class="btn btn-danger"  onclick="confirmDelete()">بله، حذف شود</button>
+      <button class="btn btn-ghost"   onclick="closeModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
